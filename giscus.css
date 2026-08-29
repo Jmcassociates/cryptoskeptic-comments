@@ -11,8 +11,10 @@ main {
   --color-canvas-subtle: rgba(30, 41, 59, 0.3) !important;
   
   /* Forensic Cyberpunk Color Scheme (Cyan/Purple neon) */
-  --color-border-default: rgba(6, 182, 212, 0.15) !important;
-  --color-border-muted: rgba(139, 92, 246, 0.12) !important;
+  --color-border-default: rgba(139, 92, 246, 0.15) !important;  /* Dim Purple */
+  --color-border-muted: rgba(6, 182, 212, 0.12) !important;     /* Dim Cyan */
+  --color-neutral-border: rgba(139, 92, 246, 0.15) !important;
+  --color-neutral-border-muted: rgba(6, 182, 212, 0.12) !important;
   --color-neutral-muted: rgba(255, 255, 255, 0.05) !important;
   
   /* Brand Typography & Links */
@@ -51,4 +53,25 @@ textarea:focus {
   outline: none !important;
   border-color: #06b6d4 !important;
   box-shadow: 0 0 10px rgba(6, 182, 212, 0.15) !important;
+}
+
+/* Custom overrides to dim down Giscus containers, comments, inputs, and boxes to our exact cyber-borders */
+.giscus-wrapper .Box, 
+.giscus-wrapper .timeline-comment, 
+.giscus-wrapper .color-border-default, 
+.giscus-wrapper .color-border-muted,
+.giscus-wrapper .giscus-upvote-button {
+  border-color: rgba(139, 92, 246, 0.15) !important; /* Dim Purple */
+}
+
+.giscus-wrapper .timeline-comment-header {
+  border-bottom-color: rgba(139, 92, 246, 0.15) !important;
+  background-color: rgba(139, 92, 246, 0.02) !important; /* Dim Purple wash */
+}
+
+/* Dimmer textareas and inputs to match */
+.giscus-wrapper textarea, 
+.giscus-wrapper input {
+  border-color: rgba(6, 182, 212, 0.15) !important; /* Dim Cyan */
+  background-color: rgba(15, 23, 42, 0.4) !important; /* Slate wash */
 }
