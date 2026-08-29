@@ -1,0 +1,95 @@
+/* 
+ * CryptoSkeptic.org - Premium Giscus Cyberpunk Theme Skin 
+ * Architect: James McCabe (ModernCYPH3R)
+ * Signature: -Bert
+ */
+
+main {
+  /* Core layout defaults matching our body/card canvas */
+  --color-canvas-default: transparent !important;
+  --color-canvas-overlay: #0b111e !important;
+  --color-canvas-subtle: rgba(30, 41, 59, 0.3) !important;
+  
+  /* Forensic Cyberpunk Color Scheme (Cyan/Purple neon) */
+  --color-border-default: rgba(139, 92, 246, 0.15) !important;  /* Dim Purple */
+  --color-border-muted: rgba(6, 182, 212, 0.12) !important;     /* Dim Cyan */
+  --color-neutral-border: rgba(139, 92, 246, 0.15) !important;
+  --color-neutral-border-muted: rgba(6, 182, 212, 0.12) !important;
+  --color-neutral-muted: rgba(255, 255, 255, 0.05) !important;
+  
+  /* Brand Typography & Links */
+  --color-accent-fg: #06b6d4 !important;           /* Neon Cyan */
+  --color-accent-emphasis: #8b5cf6 !important;     /* Neon Purple */
+  --color-fg-default: #e2e8f0 !important;          /* Light gray text */
+  --color-fg-muted: #94a3b8 !important;            /* Muted gray */
+  --color-fg-subtle: #64748b !important;           /* Dark gray */
+  
+  /* Input & Button Styling */
+  --color-btn-bg: rgba(255, 255, 255, 0.04) !important;
+  --color-btn-border: rgba(255, 255, 255, 0.08) !important;
+  --color-btn-text: #fff !important;
+  --color-btn-primary-bg: #8b5cf6 !important;
+  --color-btn-primary-border: #8b5cf6 !important;
+  --color-btn-primary-text: #fff !important;
+  
+  /* Warning & Alerts */
+  --color-attention-subtle: rgba(245, 158, 11, 0.05) !important;
+  --color-danger-fg: #ef4444 !important;
+}
+
+/* Custom override for font-family to JetBrains Mono */
+.giscus-wrapper, .giscus, input, textarea, button {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+}
+
+/* Force Giscus container and iframe elements to stretch 100% wide */
+.giscus, .giscus-frame, iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Add a very subtle cyber-glow to the active comment textarea */
+textarea:focus {
+  outline: none !important;
+  border-color: #06b6d4 !important;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.15) !important;
+}
+
+/* Custom Giscus classes override (.gsc prefix targets Giscus components directly) */
+.gsc-comment,
+.gsc-comment-box,
+.gsc-upvote-button,
+.gsc-reactions-button,
+.gsc-social-reaction-summary-item,
+.Box, 
+.Box-header,
+.Box-body,
+.Box-footer,
+.timeline-comment, 
+.timeline-comment-header,
+.timeline-comment-wrapper,
+.color-border-default, 
+.color-border-muted,
+.color-border-subtle,
+.borderColor-default,
+.borderColor-muted,
+.borderColor-subtle,
+fieldset,
+hr {
+  border-color: rgba(139, 92, 246, 0.15) !important; /* Dim Purple */
+}
+
+/* Specific styling for the Giscus timeline comment headers */
+.gsc-comment-header,
+.timeline-comment-header {
+  border-bottom-color: rgba(139, 92, 246, 0.15) !important;
+  background-color: rgba(139, 92, 246, 0.02) !important; /* Dim Purple wash */
+}
+
+/* Dimmer textareas and inputs to match */
+textarea, 
+input,
+.gsc-comment-box-textarea {
+  border-color: rgba(6, 182, 212, 0.15) !important; /* Dim Cyan */
+  background-color: rgba(15, 23, 42, 0.4) !important; /* Slate wash */
+}
