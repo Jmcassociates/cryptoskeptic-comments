@@ -55,7 +55,12 @@ textarea:focus {
   box-shadow: 0 0 10px rgba(6, 182, 212, 0.15) !important;
 }
 
-/* Wipe out ANY white or bright borders on comment cards, boxes, timeline threads, and reactions */
+/* Custom Giscus classes override (.gsc prefix targets Giscus components directly) */
+.gsc-comment,
+.gsc-comment-box,
+.gsc-upvote-button,
+.gsc-reactions-button,
+.gsc-social-reaction-summary-item,
 .Box, 
 .Box-header,
 .Box-body,
@@ -69,14 +74,13 @@ textarea:focus {
 .borderColor-default,
 .borderColor-muted,
 .borderColor-subtle,
-.giscus-comment,
-.giscus-comment-header,
-.giscus-upvote-button,
 fieldset,
 hr {
   border-color: rgba(139, 92, 246, 0.15) !important; /* Dim Purple */
 }
 
+/* Specific styling for the Giscus timeline comment headers */
+.gsc-comment-header,
 .timeline-comment-header {
   border-bottom-color: rgba(139, 92, 246, 0.15) !important;
   background-color: rgba(139, 92, 246, 0.02) !important; /* Dim Purple wash */
@@ -84,7 +88,8 @@ hr {
 
 /* Dimmer textareas and inputs to match */
 textarea, 
-input {
+input,
+.gsc-comment-box-textarea {
   border-color: rgba(6, 182, 212, 0.15) !important; /* Dim Cyan */
   background-color: rgba(15, 23, 42, 0.4) !important; /* Slate wash */
 }
